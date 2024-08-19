@@ -25,7 +25,7 @@ from typing import (
     overload,
 )
 
-from pydantic import AliasPath, BaseModel, EmailStr
+from pydantic import AliasChoices, AliasPath, BaseModel, EmailStr
 from pydantic.fields import FieldInfo as PydanticFieldInfo
 from sqlalchemy import (
     Boolean,
@@ -212,7 +212,7 @@ def Field(
     *,
     default_factory: Optional[NoArgAnyCallable] = None,
     alias: Optional[str] = None,
-    validation_alias: AliasPath = None,
+    validation_alias: str | AliasPath | AliasChoices = None,
     title: Optional[str] = None,
     description: Optional[str] = None,
     exclude: Union[
@@ -258,7 +258,7 @@ def Field(
     *,
     default_factory: Optional[NoArgAnyCallable] = None,
     alias: Optional[str] = None,
-    validation_alias: AliasPath = None,
+    validation_alias: str | AliasPath | AliasChoices = None,
     title: Optional[str] = None,
     description: Optional[str] = None,
     exclude: Union[
@@ -313,7 +313,7 @@ def Field(
     *,
     default_factory: Optional[NoArgAnyCallable] = None,
     alias: Optional[str] = None,
-    validation_alias: AliasPath = None,
+    validation_alias: str | AliasPath | AliasChoices = None,
     title: Optional[str] = None,
     description: Optional[str] = None,
     exclude: Union[
@@ -349,7 +349,7 @@ def Field(
     *,
     default_factory: Optional[NoArgAnyCallable] = None,
     alias: Optional[str] = None,
-    validation_alias: AliasPath = None,
+    validation_alias: str | AliasPath | AliasChoices = None,
     title: Optional[str] = None,
     description: Optional[str] = None,
     exclude: Union[
