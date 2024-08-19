@@ -346,6 +346,7 @@ def Field(
     *,
     default_factory: Optional[NoArgAnyCallable] = None,
     alias: Optional[str] = None,
+    validation_alias = None,
     title: Optional[str] = None,
     description: Optional[str] = None,
     exclude: Union[
@@ -388,6 +389,7 @@ def Field(
         default,
         default_factory=default_factory,
         alias=alias,
+				validation_alias=validation_alias,
         title=title,
         description=description,
         exclude=exclude,
